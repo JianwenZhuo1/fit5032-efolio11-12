@@ -10,6 +10,7 @@ import WeatherView from '@/views/WeatherView.vue'
 import CountBookAPI from '@/views/CountBookAPI.vue'
 import GetAllBooksAPI from '@/views/GetAllBooksAPI.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -67,7 +68,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
@@ -83,3 +84,4 @@ router.beforeEach((to, from, next) => {
 ;
 
 export default router
+
